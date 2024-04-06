@@ -8,10 +8,10 @@ path <- paths_allowed(link)
 website<- read_html(link)
 View(website)
 
-story_of_money_hiest<- web  %>% html_node("h3+ ul li") %>% html_text()
+story_of_money_hiest<- website%>% html_node("h3+ ul li") %>% html_text()
 View(story_of_money_hiest)
 
-theme_and_analysis<- web  %>% html_node("p:nth-child(68) , p:nth-child(67) , p:nth-child(66) , p:nth-child(65)") %>% html_text()
+theme_and_analysis<- website%>% html_node("p:nth-child(68) , p:nth-child(67) , p:nth-child(66) , p:nth-child(65)") %>% html_text()
 View(theme_and_analysis)
 
 story <- data.frame(story_of_money_hiest)
